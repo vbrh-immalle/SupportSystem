@@ -1,4 +1,4 @@
-from random import randint
+from random import choice
 
 class Responder:
     
@@ -7,8 +7,7 @@ class Responder:
         self.fillResponses()
 
     def generateResponse(self):
-        random_index = randint(0, len(self.responses) - 1)
-        return self.responses[random_index]
+        return choice(self.responses)
 
     def fillResponses(self):
         self.responses.append("Ahzo?")
