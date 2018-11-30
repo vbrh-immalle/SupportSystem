@@ -12,12 +12,12 @@ class SupportSystem:
         self.printWelcome()
 
         while not finished:
-            user_input = self.reader.getInput()
+            wordset = self.reader.getInput()
 
-            if user_input.startswith('bye'):
+            if 'bye' in wordset:
                 finished = True
             else:
-                response = self.responder.generateResponse()
+                response = self.responder.generateResponse(wordset)
                 print(response)
 
         self.printGoodbye()

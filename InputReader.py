@@ -1,5 +1,8 @@
 class InputReader:
     def getInput(self):
-        #print(" > ", end='')
         user_input = input(" > ")
-        return user_input
+        splitted_input = user_input.split()
+        wordset = set()
+        for w in splitted_input:
+            wordset.add(w)
+        return wordset
